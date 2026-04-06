@@ -1,3 +1,20 @@
 spring:
-  application:
-    name: java_mysql_mcp
+  ai:
+    mcp:
+      server:
+        name: java-mysql-mcp
+        version: 0.0.1
+        stdio: true
+  datasource:
+    url: jdbc:mysql://${MYSQL_HOST:localhost}:${MYSQL_PORT:3306}/${MYSQL_DATABASE:}
+    username: ${MYSQL_USER:root}
+    password: ${MYSQL_PASSWORD:}
+    hikari:
+      maximum-pool-size: 10
+
+mcp:
+  permissions:
+    allow-insert: ${ALLOW_INSERT:false}
+    allow-update: ${ALLOW_UPDATE:false}
+    allow-delete: ${ALLOW_DELETE:false}
+    allow-ddl: ${ALLOW_DDL:false}
