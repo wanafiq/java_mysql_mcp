@@ -54,7 +54,11 @@ Edit `~/Library/Application Support/Claude/claude_desktop_config.json` (macOS) o
         "MYSQL_PORT": "3306",
         "MYSQL_USER": "root",
         "MYSQL_PASSWORD": "your_password",
-        "MYSQL_DATABASE": "your_database"
+        "MYSQL_DATABASE": "your_database",
+        "ALLOW_INSERT": "false",
+        "ALLOW_UPDATE": "false",
+        "ALLOW_DELETE": "false",
+        "ALLOW_DDL": "false"
       }
     }
   }
@@ -79,7 +83,11 @@ Add to your project's `.mcp.json` or `~/.claude.json`:
         "MYSQL_PORT": "3306",
         "MYSQL_USER": "root",
         "MYSQL_PASSWORD": "your_password",
-        "MYSQL_DATABASE": "your_database"
+        "MYSQL_DATABASE": "your_database",
+        "ALLOW_INSERT": "false",
+        "ALLOW_UPDATE": "false",
+        "ALLOW_DELETE": "false",
+        "ALLOW_DDL": "false"
       }
     }
   }
