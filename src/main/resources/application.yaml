@@ -11,6 +11,10 @@ spring:
     password: ${MYSQL_PASSWORD:}
     hikari:
       maximum-pool-size: 10
+      connection-test-query: SELECT 1
+      keepalive-time: 300000
+      max-lifetime: 1800000
+      idle-timeout: 600000
 
 mcp:
   permissions:
