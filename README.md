@@ -30,7 +30,7 @@ cd java_mysql_mcp
 ./mvnw package -DskipTests
 ```
 
-This produces `target/java-mysql-mcp-0.0.1-SNAPSHOT.jar`.
+This produces `java-mysql-mcp.jar` in the project root (also available at `target/java-mysql-mcp.jar`).
 
 ### 2. Configure your AI client
 
@@ -47,7 +47,7 @@ Edit `~/Library/Application Support/Claude/claude_desktop_config.json` (macOS) o
       "command": "java",
       "args": [
         "-jar",
-        "/absolute/path/to/java-mysql-mcp-0.0.1-SNAPSHOT.jar"
+        "/absolute/path/to/java-mysql-mcp.jar"
       ],
       "env": {
         "MYSQL_HOST": "127.0.0.1",
@@ -76,7 +76,7 @@ Add to your project's `.mcp.json` or `~/.claude.json`:
       "command": "java",
       "args": [
         "-jar",
-        "/absolute/path/to/java-mysql-mcp-0.0.1-SNAPSHOT.jar"
+        "/absolute/path/to/java-mysql-mcp.jar"
       ],
       "env": {
         "MYSQL_HOST": "127.0.0.1",
@@ -288,7 +288,7 @@ In the Inspector UI at `http://localhost:6274`:
 
 1. Set **Transport** to `STDIO`
 2. Set **Command** to `java`
-3. Set **Arguments** to `-jar /absolute/path/to/java-mysql-mcp-0.0.1-SNAPSHOT.jar`
+3. Set **Arguments** to `-jar /absolute/path/to/java-mysql-mcp.jar`
 4. Add your environment variables under **Environment Variables**:
 
    | Key | Value |
@@ -395,7 +395,7 @@ com.wmatech.java_mysql_mcp
 
 ```bash
 MYSQL_HOST=localhost MYSQL_DATABASE=mydb MYSQL_USER=root MYSQL_PASSWORD=secret \
-  java -jar target/java-mysql-mcp-0.0.1-SNAPSHOT.jar
+  java -jar java-mysql-mcp.jar
 ```
 
 ## Roadmap
