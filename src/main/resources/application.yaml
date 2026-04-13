@@ -1,7 +1,7 @@
-server:
-  port: 8089
-
 spring:
+  main:
+    banner-mode: off
+    web-application-type: none
   ai:
     mcp:
       server:
@@ -25,3 +25,7 @@ mcp:
     allow-update: ${ALLOW_UPDATE:false}
     allow-delete: ${ALLOW_DELETE:false}
     allow-ddl: ${ALLOW_DDL:false}
+
+logging:
+  file:
+    name: ${LOG_FILE:${java.io.tmpdir}/java-mysql-mcp.log}
